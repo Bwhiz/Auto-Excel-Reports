@@ -32,5 +32,11 @@ jobs:
         python -m pip install --upgrade pip
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
 
+    - name: Debug environment variables
+      run: |
+        echo "sheet_name: $SHEET_NAME"
+        echo "sheet_id: $SHEET_ID"
+
+
     - name: Run Report Script
       run: python report_script.py
