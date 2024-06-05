@@ -11,7 +11,6 @@ from auto_mail import send_email
 
 load_dotenv()
 
-
 email_app_pswd = os.getenv('app_password')
 sender_mail = os.getenv('sender_email')
 recipient_mail = [os.getenv('recipient_mail'),]
