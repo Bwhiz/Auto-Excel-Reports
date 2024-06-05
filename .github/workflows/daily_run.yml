@@ -15,7 +15,7 @@ jobs:
         sheet_name: ${{ secrets.sheet_name }}
         sheet_id: ${{ secrets.sheet_id }}
         app_password: ${{ secrets.app_password }}
-        sender_email: ${{ secrets.sender_mail }}
+        sender_email: ${{ secrets.sender_email }}
         recipient_mail: ${{ secrets.recipient_mail }}
 
     steps:

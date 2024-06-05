@@ -14,7 +14,6 @@ load_dotenv()
 
 email_app_pswd = os.getenv('app_password')
 sender_mail = os.getenv('sender_email')
-print(sender_mail)
 recipient_mail = [os.getenv('recipient_mail'),]
 sheet_name = os.getenv('sheet_name')
 sheet_id = os.getenv('sheet_id')
