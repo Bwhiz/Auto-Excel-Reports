@@ -32,4 +32,4 @@ jobs:
         sheet_id: ${{ secrets.SHEET_ID }}
         app_password: ${{ secrets.APP_PASSWORD }}
         sender_email: ${{ secrets.SENDER_EMAIL }}
-        recipient_mail: ${{ serets.RECIPIENT_MAIL }}
+        recipient_mail: ${{ secrets.RECIPIENT_MAIL }}
