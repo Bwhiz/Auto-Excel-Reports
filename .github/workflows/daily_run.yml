@@ -34,8 +34,8 @@ jobs:
 
     - name: Debug environment variables
       run: |
-        echo "sheet_name: $SHEET_NAME"
-        echo "sheet_id: $SHEET_ID"
+        echo "sheet_name: $sheet_name"
+        echo "sheet_id: $sheet_id"
 
 
     - name: Run Report Script
