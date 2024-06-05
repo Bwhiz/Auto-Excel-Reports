@@ -1,5 +1,5 @@
 import pandas as pd
-# from dotenv import load_dotenv
+from dotenv import load_dotenv
 import os
 from datetime import datetime, timedelta
 from openpyxl import Workbook
@@ -9,11 +9,12 @@ from datetime import datetime, timedelta
 from openpyxl.styles import Alignment, Font, PatternFill
 from auto_mail import send_email
 
-# load_dotenv()
+load_dotenv()
 
 
 email_app_pswd = os.getenv('app_password')
 sender_mail = os.getenv('sender_email')
+print(sender_mail)
 recipient_mail = [os.getenv('recipient_mail'),]
 sheet_name = os.getenv('sheet_name')
 sheet_id = os.getenv('sheet_id')
