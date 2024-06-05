@@ -1,5 +1,5 @@
 import pandas as pd
-from dotenv import load_dotenv
+# from dotenv import load_dotenv
 import os
 from datetime import datetime, timedelta
 from openpyxl import Workbook
@@ -9,7 +9,7 @@ from datetime import datetime, timedelta
 from openpyxl.styles import Alignment, Font, PatternFill
 from auto_mail import send_email
 
-load_dotenv()
+# load_dotenv()
 
 
 email_app_pswd = os.getenv('APP_PASSWORD')
@@ -17,6 +17,8 @@ sender_mail = os.getenv('SENDER_EMAIL')
 recipient_mail = [os.getenv('RECIPIENT_MAIL'),]
 sheet_name = os.getenv('SHEET_NAME')
 sheet_id = os.getenv('SHEET_ID')
+print(sheet_name)
+print(sheet_id)
 
 current_datetime = datetime.now()
 # Extract the month name and year
