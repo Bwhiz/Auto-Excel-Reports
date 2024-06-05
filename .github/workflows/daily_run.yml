@@ -11,6 +11,13 @@ jobs:
   run-scripts:
     runs-on: ubuntu-latest
 
+    env:
+        sheet_name: ${{ secrets.SHEET_NAME }}
+        sheet_id: ${{ secrets.SHEET_ID }}
+        app_password: ${{ secrets.APP_PASSWORD }}
+        sender_email: ${{ secrets.SENDER_EMAIL }}
+        recipient_mail: ${{ secrets.RECIPIENT_MAIL }}
+
     steps:
     - name: Checkout repository
       uses: actions/checkout@v3
@@ -27,9 +34,3 @@ jobs:
 
     - name: Run Report Script
       run: python report_script.py
-      env:
-        sheet_name: ${{ secrets.SHEET_NAME }}
-        sheet_id: ${{ secrets.SHEET_ID }}
-        app_password: ${{ secrets.APP_PASSWORD }}
-        sender_email: ${{ secrets.SENDER_EMAIL }}
-        recipient_mail: ${{ secrets.RECIPIENT_MAIL }}

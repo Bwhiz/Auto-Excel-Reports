@@ -1,4 +1,5 @@
 import pandas as pd
+from dotenv import load_dotenv
 import os
 from datetime import datetime, timedelta
 from openpyxl import Workbook
@@ -8,11 +9,14 @@ from datetime import datetime, timedelta
 from openpyxl.styles import Alignment, Font, PatternFill
 from auto_mail import send_email
 
-email_app_pswd = os.environ.get('APP_PASSWORD')
-sender_mail = os.environ.get('SENDER_EMAIL')
-recipient_mail = [os.environ.get('RECIPIENT_MAIL'),]
-sheet_name = os.environ.get('SHEET_NAME')
-sheet_id = os.environ.get('SHEET_ID')
+load_dotenv()
+
+
+email_app_pswd = os.getenv('APP_PASSWORD')
+sender_mail = os.getenv('SENDER_EMAIL')
+recipient_mail = [os.getenv('RECIPIENT_MAIL'),]
+sheet_name = os.getenv('SHEET_NAME')
+sheet_id = os.getenv('SHEET_ID')
 
 current_datetime = datetime.now()
 # Extract the month name and year
@@ -32,7 +36,7 @@ Regards.
 subject = "HOUSE PRICE DETAILS for NIGERIA"
 
 url = f"https://docs.google.com/spreadsheets/d/{sheet_id}/gviz/tq?tqx=out:csv&sheet={sheet_name}"
-
+print(url)
 
 data = pd.read_csv(url)
 house_details_df = {}
