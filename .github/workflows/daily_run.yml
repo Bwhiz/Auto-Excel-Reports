@@ -1,6 +1,9 @@
 name: Daily House Report Script Execution
 
 on:
+  push:
+    branches:
+      - main
   schedule:
     - cron: '0 0 * * *'
 
@@ -25,8 +28,8 @@ jobs:
     - name: Run Report Script
       run: python report_script.py
       env:
-        sheet_name: ${{ secrets.sheet_name }}
-        sheet_id: ${{ secrets.sheet_id }}
-        app_password: ${{ secrets.app_password }}
-        sender_email: ${{ secrets.sender_email }}
-        recipient_mail: ${{ serets.recipient_mail }}
+        sheet_name: ${{ secrets.SHEET_NAME }}
+        sheet_id: ${{ secrets.SHEET_ID }}
+        app_password: ${{ secrets.APP_PASSWORD }}
+        sender_email: ${{ secrets.SENDER_EMAIL }}
+        recipient_mail: ${{ serets.RECIPIENT_MAIL }}

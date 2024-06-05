@@ -12,11 +12,11 @@ from auto_mail import send_email
 load_dotenv()
 
 
-email_app_pswd = os.environ.get('app_password')
-sender_mail = os.environ.get('sender_email')
-recipient_mail = [os.environ.get('recipient_mail'),]
-sheet_name = os.getenv('sheet_name')
-sheet_id = os.getenv('sheet_id')
+email_app_pswd = os.environ.get('APP_PASSWORD')
+sender_mail = os.environ.get('SENDER_EMAIL')
+recipient_mail = [os.environ.get('RECIPIENT_MAIL'),]
+sheet_name = os.getenv('SHEET_NAME')
+sheet_id = os.getenv('SHEET_ID')
 
 current_datetime = datetime.now()
 # Extract the month name and year
