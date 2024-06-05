@@ -70,4 +70,11 @@ jobs:
 
     - name: Run Report Script
       run: python report_script.py
+```
 
+
+## Example Excel WorkSheet:
+
+Here's a sample of the generated Excel file:
+
+![Alt Text](https://github.com/Bwhiz/Auto-Excel-Reports/blob/main/assets/house_price_demo.jpg)
