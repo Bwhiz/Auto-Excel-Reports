@@ -12,13 +12,11 @@ from auto_mail import send_email
 # load_dotenv()
 
 
-email_app_pswd = os.getenv('APP_PASSWORD')
-sender_mail = os.getenv('SENDER_EMAIL')
-recipient_mail = [os.getenv('RECIPIENT_MAIL'),]
-sheet_name = os.getenv('SHEET_NAME')
-sheet_id = os.getenv('SHEET_ID')
-print(sheet_name)
-print(sheet_id)
+email_app_pswd = os.getenv('app_password')
+sender_mail = os.getenv('sender_email')
+recipient_mail = [os.getenv('recipient_mail'),]
+sheet_name = os.getenv('sheet_name')
+sheet_id = os.getenv('sheet_id')
 
 current_datetime = datetime.now()
 # Extract the month name and year
@@ -38,7 +36,6 @@ Regards.
 subject = "HOUSE PRICE DETAILS for NIGERIA"
 
 url = f"https://docs.google.com/spreadsheets/d/{sheet_id}/gviz/tq?tqx=out:csv&sheet={sheet_name}"
-print(url)
 
 data = pd.read_csv(url)
 house_details_df = {}
